@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthServiceService } from './auth-service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  
+  constructor(private _router:Router,private _authServiceService:AuthServiceService){
+    /*if(_authServiceService.hasToken()){
+      this._router.navigate(['/dashboard']);
+    }*/
+  }
+ 
+  ngOnInit(){
+    
+  }
 }
